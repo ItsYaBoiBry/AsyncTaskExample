@@ -20,7 +20,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".AsyncActivityClass"></activity>
+        <activity
+            android:name=".AsyncActivityClass"
+            android:theme="@style/AppTheme.NoActionBar" />
     </application>
 
 </manifest>

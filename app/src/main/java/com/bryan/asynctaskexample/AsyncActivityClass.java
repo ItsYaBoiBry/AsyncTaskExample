@@ -50,7 +50,7 @@ public class AsyncActivityClass extends AppCompatActivity {
 
         @Override
         protected void onPostExecute(String result) {
-            Log.i("executed result: ", result + "");
+            Log.e("executed result: ", result + "");
             Intent intent = new Intent();
             intent.putExtra("result", result);
             setResult(2, intent);

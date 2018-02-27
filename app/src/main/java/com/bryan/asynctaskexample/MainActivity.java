@@ -24,14 +24,14 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         textView = findViewById(R.id.jsonString);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, AsyncActivityClass.class);
-                intent.putExtra("link", "http://datamall2.mytransport.sg/ltaodataservice/BusStops");
-                intent.putExtra("AccountKey","SFtHKwbETzi/0lasguUW5g==");
-                intent.putExtra("accept","application/json");
+                FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+                fab.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        Intent intent = new Intent(MainActivity.this, AsyncActivityClass.class);
+                        intent.putExtra("link", "http://datamall2.mytransport.sg/ltaodataservice/BusStops");
+                        intent.putExtra("AccountKey","SFtHKwbETzi/0lasguUW5g==");
+                        intent.putExtra("accept","application/json");
                 startActivityForResult(intent,REQUEST_CODE);
             }
         });
@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
         if(requestCode==REQUEST_CODE){
             String result = data.getStringExtra("result");
             textView.setText(result);
-            Log.i("intent result: ", result +"");
+            Log.e("intent result: ", result +"");
         }
     }
 
